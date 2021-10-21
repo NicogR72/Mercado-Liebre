@@ -138,6 +138,11 @@ main section article .envio i {
   position: absolute;
   right: 5%;
   top: 97.2%;
+  transition: transform 450ms;
+}
+
+main section article i:hover {
+  transform: rotateZ(-90deg);
 }
 
 main section article .features .min {
@@ -157,8 +162,6 @@ main section article .features strong {
   border: none;
   border-radius: 5%;
 }
-
-
 
 main form div p {
   font-weight: bold;
@@ -215,6 +218,11 @@ main form div label {
   height: 22px;
   border: none;
   border-radius: 5%;
+  transition: background 450ms;
+}
+
+.button-login:hover {
+  background: #0022aa;
 }
 
 footer {
@@ -293,17 +301,20 @@ footer .copyright {
 
   main section article {
     max-width: 45%;
+    transition: box-shadow 600ms;
+  }
+
+  main section article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
   main section article .features strong {
-    display: inline;
+    display: block;
   }
 
   main form {
     margin: 0 36%;
   }
-
 }
 
 @media (min-width: 769px) {
@@ -346,10 +357,28 @@ footer .copyright {
 
   main section article {
     max-width: 22.5%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
 
   main section article .features strong {
-    display: inline;
+    display: none;
+  }
+
+  main section article .features:hover strong {
+    display: block;
+  }
+
+  footer {
+    display: flex;
+    position: relative;
+  }
+
+  footer i:hover {
+    color: #eac926;
+  }
+
+  .copyright {
+    position: absolute;
+    top: 100%;
+    left: 0%;
   }
 }
